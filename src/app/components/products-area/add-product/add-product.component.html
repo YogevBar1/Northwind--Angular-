@@ -1,0 +1,27 @@
+<div>
+
+    <form (submit)="send(img)" #myForm="ngForm" ngNativeValidate>
+
+        <label>Name:</label>
+        <input type="text" name="name" [(ngModel)]="product.name" required minlength="2" #nameBox="ngModel">
+        <span class="err" *ngIf="nameBox.errors?.['required'] && nameBox.touched">Missing name.</span>
+        <span class="err" *ngIf="nameBox.errors?.['minlength'] && nameBox.touched">Name too short.</span>
+
+        <label>Price:</label>
+        <input type="Number" name="price" step="0.01" [(ngModel)]="product.price" required #priceBox="ngModel">
+        <span class="err" *ngIf="priceBox.errors?.['required'] && priceBox.touched">Missing Price.</span>
+
+
+        <label>Stock:</label>
+        <input type="number" name="stock" [(ngModel)]="product.stock" required #stockBox="ngModel">
+        <span class="err" *ngIf="stockBox.errors?.['required'] && stockBox.touched">Missing Price.</span>
+
+
+        <label>Image:</label>
+        <input type="file" accept="image/*" name="image" #img [(ngModel)]="product.image" required #imageBox="ngModel">
+        <span class="err" *ngIf="imageBox.errors?.['required'] && imageBox.touched">Missing Image.</span>
+
+
+        <button [disabled]="myForm.invalid">Add Product</button>
+    </form>
+</div>

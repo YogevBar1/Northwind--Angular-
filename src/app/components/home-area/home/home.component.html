@@ -1,0 +1,21 @@
+<div>
+
+        <app-search></app-search>
+        <br><br>
+
+    <img *ngIf="imageNumber ===1" src="/assets/images/products1.jpeg">
+
+    <img *ngIf="imageNumber ===2" src="/assets/images/products2.jpeg">
+
+    <p *ngIf="today=== 6 || today===7">
+        Only on Weekends - {{discount}} % discount all products!
+    </p>
+
+
+    <p *ngIf="today!= 6 && today!=7">
+        Only on Weekday - {{discount}} % discount all beverages!
+    </p>
+
+
+
+</div>

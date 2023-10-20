@@ -1,0 +1,28 @@
+form{
+    width: 350px;
+    text-align: left;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px 10px;
+}
+
+input, button{
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: larger;
+    box-sizing: border-box;
+}
+
+.err{
+    position: absolute;
+    margin-left: 20px;
+    color: red;
+    font-weight: bold;
+}
+
+input.ng-invalid.ng-touched{
+    background-color: pink;
+    border: 3px solid red;
+}

@@ -1,0 +1,25 @@
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Styling the navigation menu */
+ul li {
+    display: inline; /* Display the list items horizontally */
+    margin-right: 20px; /* Add some spacing between items */
+}
+
+/* Styling the links */
+ul li a {
+    text-decoration: none; /* Remove underlines from links */
+    color: blue#333; /* Text color */
+    font-weight: bold; /* Bold font */
+    transition: color 0.3s; /* Smooth color transition on hover */
+}
+
+/* Changing link color on hover */
+ul li a:hover {
+    color: #ff9900; /* Change to your desired hover color */
+}
+

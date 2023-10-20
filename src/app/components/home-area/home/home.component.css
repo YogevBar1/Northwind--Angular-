@@ -1,0 +1,30 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+/* Centering content */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Styling the text */
+p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* Styling the images */
+img {
+    border: 1px solid;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    padding: 50px;
+}

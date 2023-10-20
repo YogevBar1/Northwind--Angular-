@@ -1,0 +1,37 @@
+<div>
+    <br><br>
+    <p *ngIf="">Total Products:{{products?.length}}</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Stock</th>
+                <th>Image</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <!-- Display all products + css design -->
+            <tr *ngFor="let p of products">
+                <td>{{p.name}}</td>
+                <!-- <td>{{p.price | currency }}</td> -->
+                <td>{{p.price | currency:"ILS" }}</td>
+                <td>{{p.stock}}</td>
+                <td>
+                    <a routerLink="/product-details/{{p.id}}">
+                        <img src="{{ p.imageUrl }}" alt="{{ p.name }}">
+
+                    </a>
+                </td>
+                <td><button (click)="deleteProduct(p.id)">❌</button></td>
+
+            </tr>
+        </tbody>
+    </table>
+
+
+    <!-- <span *ngFor="let p of products">Name: {{p.name}}🍧 </span> -->
+</div>
